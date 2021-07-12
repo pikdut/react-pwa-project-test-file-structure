@@ -17,6 +17,7 @@
           - [_typography.scss]()
     - [components]()
     - [config]()
+    - [fonts]()
     - [constants]()
     - [helpers]()
     - [lib]()
