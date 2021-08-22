@@ -1,13 +1,40 @@
 import React from 'react';
-import logo from './assets/images/logo.svg';
-import './styles/App.css';
+import './styles/App.scss';
+import { Switch } from 'react-router';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import routes from './router';
 
-function App() {
+const devSyle = {
+  minHeight: '90vh',
+  display: 'flex',
+  flexDirection: 'column'
+}
+
+function App () {
   return (
-    <div className="App">
-       Hello World Update
-    </div>
-  );
+    <> 
+      <Header />
+        <section style={devSyle}>
+          <Router>
+            <Switch>
+            {routes.map((route, idx) => {
+              return route.component ? (
+                <Route
+                    key={idx}
+                    exact
+                    path={route.path}>
+                    <route.component />
+                </Route>
+                ) : (null);
+              })}
+            </Switch>
+          </Router>
+        </section>
+      <Footer />
+    </>
+  )
 }
 
 export default App;

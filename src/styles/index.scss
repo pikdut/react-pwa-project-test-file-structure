@@ -1,0 +1,51 @@
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(../fonts/Montserrat/Montserrat-Black.ttf) format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: Montserrat !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.active-link {
+  color: #f3d034 !important;
+  text-decoration: none;
+}
+
+.nav {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.smooth-edge {
+  border-radius: 10px;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.bg-dark {
+   background-color: #041821;
+}
+
+.blockquote-footer { 
+  margin-bottom: 0px !important;
+  padding-bottom: 15px;
+}
+
+
+footer {
+  margin-top: auto;
+}
