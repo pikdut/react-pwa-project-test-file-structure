@@ -1,6 +1,7 @@
-import { Col, Container, Row } from "react-bootstrap"
+import {Container} from "react-bootstrap"
 import img from '../../assets/images/about.png'
 import img2 from '../../assets/images/about2.png'
+import DivWrapper from "../../components/Wrapper/DivWrapper";
 
 const url = window.location.pathname;
 
@@ -9,7 +10,7 @@ const activeUrl = (path) => {
 }
 
 const divStyle = {
-    marginTop: '25px',
+    marginTop: '25wpx',
     marginBottom: '25px'
 }
 
@@ -21,14 +22,14 @@ const AboutUS = () => {
                 {activeUrl('/about-us') && <h2> ABOUT US</h2> }
             </div>
 
-            <Row >
-                <Col style={{paddingTop: '320px'}}>
+            <div className="row">
+                <DivWrapper pt='320px' className="col-md-6 col-sm-12">
                     <img src={img2} alt="about2" width="100%" className='smooth-edge'/>
-                </Col>
-                <Col style={{paddingTop: '25px'}}>
+                </DivWrapper>
+                <DivWrapper pt='25px' className="col-md-6 col-sm-12">
                     <img src={img} alt="about" width="100%" className="smooth-edge"/>
-                </Col>
-            </Row>
+                </DivWrapper>
+            </div>
         </Container>
     )
 }

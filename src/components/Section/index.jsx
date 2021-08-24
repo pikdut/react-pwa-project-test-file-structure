@@ -6,12 +6,16 @@ const Section = styled.div`
     text-align: center;
 
 
-    ${props => props.top && css `
-        padding-top: ${props.top};
+    ${props => props.tp && css `
+        padding-top: ${props.tp};
     `}
 
-    ${props => props.bottom && css `
-        padding-bottom: ${props.bottom};
+    ${props => props.bt && css `
+        padding-bottom: ${props.bt};
+    `}
+
+    ${props => props.ta && css `
+        text-align: ${props.ta}
     `}
 `
 export default Section
